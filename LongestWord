@@ -1,0 +1,16 @@
+#LongestWord
+def LongestWord(sen):
+
+  # code goes here
+  max_len=0
+  longest_word = ""
+  for i in sen.split():
+    letter_only = ''.join(char for char in i if char.isalpha())
+
+    if len(letter_only)>max_len:
+      max_len= len(letter_only)
+      longest_word = letter_only
+  return longest_word
+
+# keep this function call here 
+print(LongestWord(input()))
